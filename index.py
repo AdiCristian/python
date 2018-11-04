@@ -1,5 +1,6 @@
 import sys
 
+
 # Write Fibbonacci series up to n
 def fib(n):
     a, b = 0, 1
@@ -8,27 +9,27 @@ def fib(n):
         print(a, end=' ')
         a, b = b, a + b
 
+
 # Return a list containing Fibonacci series up to n
 def fib2(n):
-
     result = []
     a, b = 0, 1
 
     while a < n:
         result.append(a)
         a, b = b, a + b
-    
+
     return result
 
-def main():
 
+def main():
     # if else Statement
     x = int(input('Please enter an integer: '))
     if x < 0:
         x = 0
         print('Negative changed to zero')
     elif x == 0:
-        print ('Zero')
+        print('Zero')
     elif x == 1:
         print('Single')
     else:
@@ -44,7 +45,6 @@ def main():
     # The range() Funciton
     for i in range(5):
         print(i)
-
 
     # break and continue Statements,
     # and else Clauses on loops
