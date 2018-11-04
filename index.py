@@ -43,7 +43,7 @@ def main():
         print(w, len(w))
 
     # The range() Funciton
-    for i in range(5):
+    for i in range(6):
         print(i)
 
     # break and continue Statements,
