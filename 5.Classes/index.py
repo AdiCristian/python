@@ -82,6 +82,26 @@ class Bag:
         self.add(x)
         self.add(x)
 
+# Data type similar to C "struct"
+class Employee:
+    pass
+
+# Iterators
+class Reverse:
+    """ Iterator for looping over a sequence backwards. """
+    def __init__(self, data):
+        self.data = data
+        self.index = len(data)
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index == 0:
+            raise StopIteration
+        self.index = self.index - 1
+        return self.data[self.index]
+
 
 def main():
     print("Classes chapter !!")
@@ -123,6 +143,17 @@ def main():
     e.add_trick('Roll over')
     print(d.tricks)
     print(e.tricks)
+
+    john = Employee() # Create an empty employee record
+    john.name = 'John Doe'
+    john.dept = 'computer lab'
+    john.salary = 1000
+
+    rev = Reverse('spam')
+    for char in rev:
+        print(char)
+
+    print(john.__dict__)
 
 
 if __name__ == '__main__':
